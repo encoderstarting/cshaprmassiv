@@ -7,6 +7,12 @@
         {
             Console.WriteLine("Введите значение!");
         }
+        int[] myArray = new int[chouse];
+        for (int i = 0; i < myArray.Length; i++)
+        {
+            Console.WriteLine($"Введите элемент массива под индексом{i}: ");
+            myArray[i] = int.Parse(Console.ReadLine());
+        }
 
 
 
