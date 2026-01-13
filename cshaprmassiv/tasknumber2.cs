@@ -13,6 +13,11 @@
             Console.WriteLine($"Введите элемент массива под индексом{i}: ");
             myArray[i] = int.Parse(Console.ReadLine());
         }
+        Console.WriteLine("Вывод массива в обратном порядке: ");
+        for (int i = -1; i < myArray.Length; i--)
+        {
+            Console.WriteLine(myArray[i]);
+        }
 
 
 

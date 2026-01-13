@@ -1,19 +1,34 @@
-﻿Console.WriteLine("Сколько хотите элементов в массиве? Введите ниже...");
-if (!int.TryParse(Console.ReadLine(), out int value))
+﻿
+
+
+
+
+
+
+
+
+
+
+Console.WriteLine("Введите сколько элементов должно быть в массиве: ");
+if (!int.TryParse(Console.ReadLine(), out int chouse))
 {
     Console.WriteLine("Введите значение!");
-    return;
 }
-
-int[] myArray = new int[value];
-for(int i = 0;i < myArray.Length; i++)
+int[] myLine = new int[chouse];
+for (int i = 0; i < myLine.Length; i++)
 {
     Console.WriteLine($"Введите элемент массива под индексом {i}:\t ");
-    myArray[i] = int.Parse(Console.ReadLine());
+    myLine[i] = int.Parse(Console.ReadLine());
 }
-Console.WriteLine("Вывод массива: ");
-for(int i = 0; i < myArray.Length; i++)
+int min = myLine[0];
+Console.WriteLine("Вывод наименьшего числа в массиве: ");
+for(int i=1; i < myLine.Length; i++)
 {
-    Console.WriteLine(myArray[i]);
+
+    if (min > myLine[i])
+    {
+        min = myLine[i];
+    }
 
 }
+Console.WriteLine(min);
